@@ -1,47 +1,52 @@
 import java.util.*;
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
 
         System.out.println("Task 1");
 
-        Deque<String> stack = new ArrayDeque<>();
-        stack.push("Peter");
-        stack.push("Sasha");
-        stack.push("Elena");
+        StackSet stackSet = new StackSet();
 
-        System.out.println(stack);
+        stackSet.push(5);
+        stackSet.push(43);
+        stackSet.push(55);
+        stackSet.push(22);
+        stackSet.push(45);
+        stackSet.push(16);
 
-        System.out.println(stack.pop());
+        System.out.println(stackSet.pop());
 
-        System.out.println(stack);
+        System.out.println(stackSet.max());
+        System.out.println(stackSet.max());
+        System.out.println(stackSet.max());
 
-        stack.push("Katrin");
-        stack.push("Vova");
+        stackSet.push(87);
+        stackSet.push(3);
 
-        System.out.println(stack);
+        System.out.println(stackSet.pop());
 
-        System.out.println(stack.pop());
+        System.out.println(stackSet.max());
 
-        System.out.println(stack);
+
+//        Deque<String> stack = new ArrayDeque<>();
+//        stack.push("Peter");
+//        stack.push("Sasha");
+//        stack.push("Elena");
+//
+//        System.out.println(stack);
+//
+//        System.out.println(stack.pop());
+//
+//        System.out.println(stack);
 
 
         System.out.println("Task 2");
 
-        String str = "aartttwqddduuss";
-        System.out.println(str);
-        Map<Character, Integer> letters = new HashMap<>();
-        char[] lettersArray = str.toCharArray();
+        CharsCount charsCount = new CharsCount();
 
-        for (char c : lettersArray) {
-            if (letters.containsKey(c)) {
-                letters.put(c, letters.get(c) + 1);
-            } else {
-                letters.putIfAbsent(c, 1);
-            }
-        }
-
-        for (Map.Entry<Character, Integer> item : letters.entrySet()) {
+        for (Map.Entry<Character, Integer> item :
+                charsCount.getCharsCount("aartttwqddduuss").entrySet()) {
             System.out.printf("'%s' -  %d \n", item.getKey(), item.getValue());
         }
     }
