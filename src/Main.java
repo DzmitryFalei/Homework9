@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,19 +26,6 @@ public class Main {
         System.out.println(stackSet.pop());
 
         System.out.println(stackSet.max());
-
-
-//        Deque<String> stack = new ArrayDeque<>();
-//        stack.push("Peter");
-//        stack.push("Sasha");
-//        stack.push("Elena");
-//
-//        System.out.println(stack);
-//
-//        System.out.println(stack.pop());
-//
-//        System.out.println(stack);
-
 
         System.out.println("Task 2");
 
